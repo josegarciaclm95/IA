@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 19597056}
   - component: {fileID: 11402594}
   - component: {fileID: 11450346}
-  - component: {fileID: 114076287196500446}
+  - component: {fileID: 114588327667089958}
   m_Layer: 0
   m_Name: AIThirdPersonController
   m_TagString: Untagged
@@ -2719,7 +2719,7 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 113348}
   m_IsPrefabParent: 1
---- !u!114 &114076287196500446
+--- !u!114 &114588327667089958
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2727,8 +2727,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 113348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ef192bf642d57d4092d8dcf2acda4d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 15c55995fd5e20f4d8a06a7bce3a37d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
   speed: 0
+  id: 0
+  nombre: 
+  objeto: {fileID: 0}
