@@ -9,14 +9,16 @@ public class game : MonoBehaviour {
     Team teamB;
 	int players;
     public GameObject prefab;
-	void Start () {
+    public GameObject prefab2;
+    public Material style2;
+    void Start () {
 		this.players = 5;
         this.teamA = new Team(0,"Computasio");
         this.teamA.attack();
         this.teamB = new Team(1, "IS");
         this.teamB.defend();
-		this.createPlayers (this.teamA, new Color(0,0,1));
-		this.createPlayers (this.teamB, new Color(0, 1, 0));
+		this.createPlayers (this.teamA, this.prefab);
+		this.createPlayers (this.teamB, this.prefab2);
 	}
 	
 	// Update is called once per frame
@@ -25,14 +27,15 @@ public class game : MonoBehaviour {
         this.teamB.updateStrategies();
     }
 
-	void createPlayers (Team team, Color color){
+	void createPlayers (Team team, GameObject obj){
 		for (int i = 0; i < this.players; i++) {
-            GameObject p = Instantiate(prefab);
+            GameObject p = Instantiate(obj);
             Player j = p.GetComponent<Player>();
+           
             j.id = i;
             j.nombre = "Player" + i;
-            Debug.Log("Creo jugador-> "+j.id);
-            // p.GetComponent<Renderer>().sharedMaterial.color = color;
+            Debug.Log("Creo jugador-> "+j.id);        
+            
             team.addPlayer(j);
 		}
 	}
